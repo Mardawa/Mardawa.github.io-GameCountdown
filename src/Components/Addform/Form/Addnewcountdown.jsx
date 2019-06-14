@@ -31,8 +31,10 @@ function AddCountdown(props) {
     value,
     onDateChange,
     onNameChange,
+    onUrlChange,
     onDateSubmit,
-    nameValue
+    nameValue,
+    urlValue
   } = props;
 
   return (
@@ -44,6 +46,16 @@ function AddCountdown(props) {
           className={classes.input}
           onChange={onNameChange}
           value={nameValue}
+          inputProps={{
+            "aria-label": "Description"
+          }}
+        />
+        <Input
+          required
+          placeholder="Enter the img url"
+          className={classes.input}
+          onChange={onUrlChange}
+          value={urlValue}
           inputProps={{
             "aria-label": "Description"
           }}

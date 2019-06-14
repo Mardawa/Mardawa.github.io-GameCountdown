@@ -8,6 +8,9 @@ import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 
+import IconButton from "@material-ui/core/IconButton";
+import ClearIcon from "@material-ui/icons/Clear";
+
 // import Controls from "./Controls";
 import Timer from "./Timer";
 // import Datepicker from "../Datepicker";
@@ -44,6 +47,12 @@ const styles = theme => ({
   txt: {
     fontWeight: "bold",
     color: "white"
+  },
+  closeButton: {
+    position: "absolute",
+    right: -10,
+    top: -10,
+    color: theme.palette.grey[500]
   }
 });
 
@@ -116,7 +125,7 @@ export default withStyles(styles)(
     };
 
     getUrl(img) {
-      return "url("+img+")";
+      return "url(" + img + ")";
     }
 
     render() {
@@ -142,14 +151,49 @@ export default withStyles(styles)(
               >
                 <CardActionArea>
                   <CardContent className={classes.content}>
-                    <Typography
-                      className={classes.txt}
-                      align="center"
-                      variant="h6"
-                      gutterBottom
+                    <Grid
+                      container
+                      className={classes.root}
+                      direction="row"
+                      justify="space-around"
+                      alignItems="flex-start"
+                      spacing={0}
                     >
-                    {label} <br /> {nextDate.format("DD MMMM YYYY")}
-                    </Typography>
+                      <Grid item xs={1} />
+                      <Grid item xs>
+                        <Typography
+                          className={classes.txt}
+                          align="center"
+                          variant="h6"
+                          gutterBottom
+                        >
+                          {label}
+                        </Typography>
+                      </Grid>
+
+                      <Grid item xs={1}>
+                        <IconButton
+                          variant="contained"
+                          color="primary"
+                          className={classes.closeButton}
+                          onClick={this.onDelete}
+                        >
+                          <ClearIcon fontSize="small"> </ClearIcon>
+                        </IconButton>
+                      </Grid>
+
+                      <Grid item xs={12}>
+                        <Typography
+                          className={classes.txt}
+                          align="center"
+                          variant="h6"
+                          gutterBottom
+                        >
+                          {nextDate.format("DD MMMM YYYY")}
+                        </Typography>
+                      </Grid>
+                    </Grid>
+
                     <Typography
                       className={classes.txt}
                       variant="body2"
@@ -159,14 +203,6 @@ export default withStyles(styles)(
                       <Timer duration={duration} paused={paused} />
                     </Typography>
                   </CardContent>
-                  {/* <IconButton
-                    variant="contained"
-                    color="secondary"
-                    className={classes.button}
-                    onClick={this.onDelete}
-                  >
-                    <DeleteIcon />
-                  </IconButton> */}
                 </CardActionArea>
               </Card>
             </Grid>
