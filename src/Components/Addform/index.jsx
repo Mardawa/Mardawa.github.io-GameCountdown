@@ -176,9 +176,15 @@ export default withStyles(styles)(
             </Grid>
           </div>
           <div className={classes.root}>
-            <Grid container spacing={16}>
-              <Grid item xs={4} />
-              <Grid item xs={4}>
+            <Grid
+              container
+              direction="row"
+              justify="center"
+              alignItems="center"
+              spacing={16}
+            >
+              <Grid item xl />
+              <Grid item xl>
                 <Paper className={classes.paper} elevation={5}>
                   <AddCountdownForm
                     value={nextDate}
@@ -190,8 +196,8 @@ export default withStyles(styles)(
                     onDateSubmit={this.handleDateSubmit}
                   />
                 </Paper>
-                <Grid item xs={4} />
               </Grid>
+              <Grid item xl />
             </Grid>
           </div>
         </>

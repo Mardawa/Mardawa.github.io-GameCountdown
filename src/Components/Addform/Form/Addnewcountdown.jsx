@@ -40,38 +40,44 @@ function AddCountdown(props) {
   return (
     <Grid container direction="row" justify="center">
       <form noValidate>
-        <Input
-          required
-          placeholder="Enter a new game"
-          className={classes.input}
-          onChange={onNameChange}
-          value={nameValue}
-          inputProps={{
-            "aria-label": "Description"
-          }}
-        />
-        <Input
-          required
-          placeholder="Enter the img url"
-          className={classes.input}
-          onChange={onUrlChange}
-          value={urlValue}
-          inputProps={{
-            "aria-label": "Description"
-          }}
-        />
-        <TextField
-          required
-          id="date"
-          label="Pick a date"
-          type="date"
-          value={value}
-          className={classes.textField}
-          onChange={onDateChange}
-          InputLabelProps={{
-            shrink: true
-          }}
-        />
+        <Grid item xs>
+          <Input
+            required
+            placeholder="Enter a new game"
+            className={classes.input}
+            onChange={onNameChange}
+            value={nameValue}
+            inputProps={{
+              "aria-label": "Description"
+            }}
+          />
+        </Grid>
+        <Grid item xs>
+          <Input
+            required
+            placeholder="Enter the img url"
+            className={classes.input}
+            onChange={onUrlChange}
+            value={urlValue}
+            inputProps={{
+              "aria-label": "Description"
+            }}
+          />
+        </Grid>
+        <Grid item xs>
+          <TextField
+            required
+            id="date"
+            label="Pick a date"
+            type="date"
+            value={value}
+            className={classes.textField}
+            onChange={onDateChange}
+            InputLabelProps={{
+              shrink: true
+            }}
+          />
+        </Grid>
         <IconButton
           color="secondary"
           className={classes.button}
