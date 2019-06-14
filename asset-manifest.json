@@ -1,13 +1,13 @@
 {
-  "main.js": "/static/js/main.87b13573.chunk.js",
-  "main.js.map": "/static/js/main.87b13573.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-  "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-  "static/css/2.76f814ac.chunk.css": "/static/css/2.76f814ac.chunk.css",
-  "static/js/2.7f062e9a.chunk.js": "/static/js/2.7f062e9a.chunk.js",
-  "static/js/2.7f062e9a.chunk.js.map": "/static/js/2.7f062e9a.chunk.js.map",
-  "index.html": "/index.html",
-  "precache-manifest.27dd1a5229ffbfb5bc3218b1db1f2115.js": "/precache-manifest.27dd1a5229ffbfb5bc3218b1db1f2115.js",
-  "service-worker.js": "/service-worker.js",
-  "static/css/2.76f814ac.chunk.css.map": "/static/css/2.76f814ac.chunk.css.map"
+  "main.js": "/GameCountdown/static/js/main.87b13573.chunk.js",
+  "main.js.map": "/GameCountdown/static/js/main.87b13573.chunk.js.map",
+  "runtime~main.js": "/GameCountdown/static/js/runtime~main.a4f88fda.js",
+  "runtime~main.js.map": "/GameCountdown/static/js/runtime~main.a4f88fda.js.map",
+  "static/css/2.76f814ac.chunk.css": "/GameCountdown/static/css/2.76f814ac.chunk.css",
+  "static/js/2.7f062e9a.chunk.js": "/GameCountdown/static/js/2.7f062e9a.chunk.js",
+  "static/js/2.7f062e9a.chunk.js.map": "/GameCountdown/static/js/2.7f062e9a.chunk.js.map",
+  "index.html": "/GameCountdown/index.html",
+  "precache-manifest.05c3e13bdf5376d79399c4f998ab7211.js": "/GameCountdown/precache-manifest.05c3e13bdf5376d79399c4f998ab7211.js",
+  "service-worker.js": "/GameCountdown/service-worker.js",
+  "static/css/2.76f814ac.chunk.css.map": "/GameCountdown/static/css/2.76f814ac.chunk.css.map"
 }
