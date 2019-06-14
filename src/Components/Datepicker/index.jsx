@@ -41,7 +41,7 @@ function DatePickers(props) {
         <IconButton
           color="secondary"
           className={classes.button}
-          aria-label="Add an alarm"
+          aria-label="Add a game"
           onClick={onDateSubmit}
         >
           <AddIcon />

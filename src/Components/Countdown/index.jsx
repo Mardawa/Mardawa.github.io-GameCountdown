@@ -33,14 +33,13 @@ const styles = theme => ({
   },
   card: {
     maxWidth: 250,
-    position: "relative",
-    backgroundImage: "url(http://placekitten.com/250/305)"
+    position: "relative"
   },
   media: {
     height: 100
   },
   content: {
-    backgroundColor: "rgba(255, 255, 255, 0.4)"
+    backgroundColor: "rgba(0, 0, 0, 0.4)"
   },
   txt: {
     fontWeight: "bold",
@@ -116,10 +115,14 @@ export default withStyles(styles)(
       this.props.onDelete(this.props.id);
     };
 
+    getUrl(img) {
+      return "url("+img+")";
+    }
+
     render() {
       const { paused, nextDate } = this.state,
         duration = this.getRemainingTime(),
-        { classes, label } = this.props;
+        { classes, label, url } = this.props;
 
       return (
         <>
@@ -130,7 +133,13 @@ export default withStyles(styles)(
               justify="space-around"
               alignItems="center"
             >
-              <Card className={classes.card}>
+              <Card
+                className={classes.card}
+                style={{
+                  backgroundImage: this.getUrl(url),
+                  backgroundSize: "cover"
+                }}
+              >
                 <CardActionArea>
                   <CardContent className={classes.content}>
                     <Typography
@@ -139,7 +148,7 @@ export default withStyles(styles)(
                       variant="h6"
                       gutterBottom
                     >
-                      {label} <br /> {nextDate.format("DD MMMM YYYY")}
+                    {label} <br /> {nextDate.format("DD MMMM YYYY")}
                     </Typography>
                     <Typography
                       className={classes.txt}
